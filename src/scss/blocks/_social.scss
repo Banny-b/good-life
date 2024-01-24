@@ -1,0 +1,68 @@
+.social {
+    background: var(--grey-2-color, #EDEDED);
+
+    &__title {
+        text-align: center;
+        font-family: 'Poppins-600';
+        font-size: 40px;
+        line-height: normal;
+        color: var(--accent-color, #E43071);
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__inner-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: var(--white-color, #FFFFFF);
+    }
+}
+
+// For mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .social {
+        padding: 44px 0 66px 0;
+    
+        &__title {
+            margin-bottom: 15px;
+        }
+    
+        &__inner {
+            gap: 27px;
+        }
+    
+        &__inner-content {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}
+
+// For desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .social {
+        padding: 64px 0 70px 0;
+    
+        &__title {
+            margin-bottom: 18px;
+        }
+    
+        &__inner {
+            gap: 93px;
+        }
+    
+        &__inner-content {
+            width: 110px;
+            height: 110px;
+            transition: var(--function-transit);
+            &:hover {
+                transform: scale(0.85);
+            }
+        }
+    }
+}

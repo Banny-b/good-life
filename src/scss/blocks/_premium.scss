@@ -1,0 +1,112 @@
+.premium {
+    display: flex;
+
+    &-descrip__title {
+        font-family: 'Poppins-600';
+        font-size: 40px;
+        line-height: normal;
+        color: var(--accent-color, #E43071);
+        margin-bottom: 10px;
+    }
+
+    &-descrip__text {
+        font-family: 'Poppins-400';
+        font-size: 16px;
+        color: var(--grey-color, #424242);
+    }
+
+    &-descrip__btn {
+        text-align: center;
+        font-family: 'Poppins-600';
+        font-size: 16px;
+        line-height: 231%;
+        color: var(--accent-color, #E43071);
+        border-radius: 38px;
+        border: 2px solid var(--accent-color, #E43071);
+    }
+
+    &-images {
+        position: relative;
+    }
+
+    &-images__room-2 {
+        position: absolute;
+        top: 0;
+    }
+}
+
+// For mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .premium {
+        flex-direction: column-reverse;
+        padding: 74px 0 40px 0;
+    
+        &-descrip {
+            padding: 20px 0 0 20px;
+        }
+    
+        &-descrip__text {
+            line-height: 200%;
+            max-width: 276px;
+            margin-bottom: 30px;
+        }
+    
+        &-descrip__btn {
+            width: 288px;
+            padding: 14px 90px;
+        }
+    
+        &-images {
+            padding-top: 70px;
+            padding-right: 0;
+        }
+    
+        &-images__room-1 {
+            max-width: 190px;
+            padding-left: 96px;
+        }
+    
+        &-images__room-2 {
+            right: 90px;
+            max-width: 200px;
+        }
+    }
+}
+
+// For desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .premium {
+        padding: 134px 0 130px 0;
+    
+        &-descrip {
+            margin-right: 260px;
+            padding: 97px 0 0 140px;
+        }
+    
+        &-descrip__text {
+            line-height: 231%;
+            max-width: 485px;
+            margin-bottom: 20px;
+        }
+    
+        &-descrip__btn {
+            width: 237px;
+            padding: 14px 52px;
+            transition: var(--function-transit);
+            &:hover {
+                color: var(--white-color, #FFFFFF);
+                background: var(--accent-color, #E43071);
+                border: 2px solid var(--accent-color, #E43071);
+            }
+        }
+    
+        &-images {
+            padding-top: 140px;
+            padding-right: 80px;
+        }
+    
+        &-images__room-2 {
+            right: 210px;
+        }
+    }
+}

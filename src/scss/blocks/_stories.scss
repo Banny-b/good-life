@@ -1,0 +1,263 @@
+.stories {
+    display: flex;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), #F4E3E9;
+
+    &__title {
+        font-family: 'Poppins-600';
+        line-height: 119%;
+        color: var(--grey-color, #424242);
+    }
+
+    &__text {
+        font-family: 'Poppins-400';
+        line-height: normal;
+        color: var(--grey-color, #424242);
+    }
+
+    &__box-quote, &__subbox-quote {
+        position: relative;
+    }
+
+    &__box-quote::before, &__subbox-quote::before {
+        content: "“";
+        position: absolute;
+        color: var(--pink-color, #FFC1D8);
+    }
+
+    &__box-title, &__subbox-title {
+        font-family: 'Poppins-600';
+        line-height: 119%;
+        color: var(--accent-color, #E43071);
+    }
+
+    &__box-text, &__subbox-text {
+        font-family: 'Poppins-400';
+        line-height: 177%;
+        color: var(--grey-color, #424242);
+    }
+
+    &__box-client, &__subbox-client {
+        display: flex;
+    }
+
+    &__box-photo, &__subbox-photo {
+        border-radius: 50%;
+        margin-right: 17px;
+    }
+
+    &__box-name, &__subbox-name {
+        font-family: 'Poppins-600';
+        line-height: 188%;
+        color: var(--grey-color, #424242);
+    }
+
+    &__box-descr, &__subbox-descr {
+        font-family: 'Poppins-400';
+        line-height: 126%;
+        color: var(--l-grey-color, #969BAB);
+    }
+}
+
+// For mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .stories {
+        flex-direction: column;
+        padding: 46px 0px 40px 0px;
+    
+        &__title {
+            font-size: 26px;
+            max-width: 225px;
+            margin-bottom: 8px;
+            padding-left: 26px;
+        }
+    
+        &__text {
+            font-size: 10px;
+            margin-bottom: 24px;
+            padding-left: 26px;
+        }
+    
+        &__inner {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            margin-left: 26px;
+        }
+    
+        &__box {
+            flex: 0 0 calc(75% - 25px);
+            scroll-snap-align: start;
+            max-width: 243px;
+            min-height: 230px;
+            border-radius: 10px;
+            background: var(--white-color, #FFFFFF);
+            margin-right: 25px;
+            padding: 26px 20px;
+        }
+    
+        &__box-quote::before, &__subbox-quote::before {
+            top: -10px;
+            left: 1px;
+            font-size: 40px;
+        }
+    
+        &__box-title, &__subbox-title {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+    
+        &__box-text, &__subbox-text {
+            font-size: 12px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+    
+        &__subbox {
+            display: flex;
+        }
+    
+        &__subbox-1 {
+            flex: 0 0 calc(43% + 25px);
+            scroll-snap-align: start;
+            max-width: 243px;
+            min-height: 230px;
+            border-radius: 10px;
+            background: var(--white-color, #FFFFFF);
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: 25px;
+            padding: 26px 20px;
+        }
+    
+        &__subbox-2 {
+            flex: 0 0 calc(58% + 15px);
+            scroll-snap-align: start;
+            max-width: 208px;
+            min-height: 230px;
+            border-radius: 10px;
+            background: var(--white-color, #FFFFFF);
+            padding: 26px 20px;
+        }
+    
+        &__box-photo, &__subbox-photo {
+            margin-left: 18px;
+        }
+    
+        &__box-span, &__subbox-span {
+            padding: 7px 0;
+        }
+    
+        &__box-name, &__subbox-name {
+            font-size: 12px;
+        }
+    
+        &__box-descr, &__subbox-descr {
+            font-size: 10px;
+        }
+    }
+}
+
+// For desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .stories {
+        flex-direction: column;
+        padding: 80px 0 230px 0;
+    
+        &__title {
+            font-size: 48px;
+            max-width: 414px;
+            margin-bottom: 12px;
+            padding-left: 220px;
+        }
+    
+        &__text {
+            font-size: 18px;
+            margin-bottom: 27px;
+            padding-left: 220px;
+        }
+    
+        &__inner {
+            position: relative;
+            display: flex;
+            padding-left: 220px;
+        }
+    
+        &__box {
+            max-width: 350px;
+            border-radius: 10px;
+            background: var(--white-color, #FFFFFF);
+            box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.18);
+            margin-left: 75px;
+            padding: 36px 26px;
+            transition: var(--function-transit);
+            &:hover {
+                box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.6);
+            }
+        }
+    
+        &__box-quote::before, &__subbox-quote::before {
+            top: -16px;
+            left: 5px;
+            font-size: 58px;
+        }
+    
+        &__box-title, &__subbox-title {
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+    
+        &__box-text, &__subbox-text {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-left: 40px;
+        }
+    
+        &__subbox {
+            position: absolute;
+            left: 656px;
+            bottom: -100px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__subbox-1 {
+            max-width: 450px;
+            border-radius: 10px;
+            background: var(--white-color, #FFFFFF);
+            box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.18);
+            margin-left: 75px;
+            padding: 36px 26px;
+            margin-bottom: 33px;
+            transition: var(--function-transit);
+            &:hover {
+                box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.6);
+            }
+        }
+    
+        &__subbox-2 {
+            max-width: 350px;
+            border-radius: 10px;
+            background: var(--white-color, #FFFFFF);
+            box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.18);
+            margin-left: 75px;
+            padding: 36px 26px;
+            transition: var(--function-transit);
+            &:hover {
+                box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.6);
+            }
+        }
+    
+        &__box-photo, &__subbox-photo {
+            margin-left: 40px;
+        }
+    
+        &__box-name, &__subbox-name {
+            font-size: 18px;
+        }
+    
+        &__box-descr, &__subbox-descr {
+            font-size: 14px;
+        }
+    }
+}

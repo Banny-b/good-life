@@ -1,0 +1,131 @@
+.preview {
+    display: flex;
+
+    &-images {
+        position: relative;
+        padding-left: 140px;
+    }
+
+    &-images__pic-1 {
+        margin-right: 262px;
+        margin-bottom: 104px;
+    }
+
+    &-images__pic-2 {
+        position: absolute;
+    }
+
+    &-descrip__title {
+        font-family: 'Poppins-600';
+        font-size: 40px;
+        color: var(--accent-color, #E43071);
+        margin-bottom: 10px;
+    }
+
+    &-descrip__text {
+        font-family: 'Poppins-400';
+        font-size: 16px;
+        color: var(--grey-color, #424242);
+    }
+
+    &-descrip__btn {
+        font-family: 'Poppins-600';
+        font-size: 16px;
+        line-height: 231%;
+        color: var(--accent-color, #E43071);
+        border-radius: 38px;
+        border: 2px solid var(--accent-color, #E43071);
+    }
+}
+
+// For mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .preview {
+        flex-direction: column;
+        padding: 35px 0 0 0;
+    
+        &-images {
+            position: relative;
+            padding-left: 26px;
+        }
+    
+        &-images__pic-1 {
+            max-width: 176px;
+            margin-bottom: 80px;
+        }
+    
+        &-images__pic-2 {
+            top: 80px;
+            left: 144px;
+            max-width: 146px;
+        }
+    
+        &-descrip {
+            padding: 20px 26px;
+        }
+    
+        &-descrip__title {
+            line-height: 120%;
+            max-width: 260px;
+        }
+    
+        &-descrip__text {
+            line-height: 200%;
+            max-width: 260px;
+            margin-bottom: 20px;
+        }
+    
+        &-descrip__btn {
+            display: block;
+            text-align: center;
+            max-width: 268px;
+            padding: 10px 76px;
+        }
+    }
+}
+
+// For desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .preview {
+        padding: 94px 0 122px 0;
+    
+        &-images {
+            position: relative;
+            padding-left: 140px;
+        }
+    
+        &-images__pic-1 {
+            margin-right: 262px;
+            margin-bottom: 104px;
+        }
+    
+        &-images__pic-2 {
+            top: 145px;
+            left: 340px;
+        }
+    
+        &-descrip {
+            padding: 100px 140px 100px 0;
+        }
+    
+        &-descrip__title {
+            line-height: normal;
+        }
+    
+        &-descrip__text {
+            line-height: 231%;
+            max-width: 540px;
+            margin-bottom: 25px;
+        }
+    
+        &-descrip__btn {
+            padding: 14px 52px;
+            transition: var(--function-transit);
+            &:hover {
+                color: var(--white-color, #FFFFFF);
+                background: var(--accent-color, #E43071);
+                border: 2px solid var(--accent-color, #E43071);
+            }
+        }
+    }
+}

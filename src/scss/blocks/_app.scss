@@ -1,0 +1,94 @@
+.app {
+    position: relative;
+    display: flex;
+    background: var(--accent-color, #E43071);
+
+    &__info-title {
+        font-family: 'Poppins-600';
+        font-size: 40px;
+        color: var(--white-color, #FFFFFF);
+        margin-bottom: 10px;
+    }
+
+    &__info-text {
+        font-family: 'Poppins-400';
+        font-size: 16px;
+        color: var(--white-color, #FFFFFF);
+        margin-bottom: 15px;
+    }
+
+    &__info-download {
+        font-family: 'Poppins-400';
+        font-size: 16px;
+        line-height: normal;
+        color: rgba(255, 255, 255, 0.60);
+        margin-bottom: 5px;
+    }
+
+    &__info-app {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+// For mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .app {
+        flex-direction: column;
+        padding: 50px 0 474px 0;
+    
+        &__info {
+            padding-left: 20px;
+        }
+    
+        &__info-title {
+            max-width: 270px;
+            line-height: 120%;
+        }
+    
+        &__info-text {
+            line-height: 206%;
+            max-width: 270px;
+        }
+    
+        &__pictures-images-mob {
+            position: absolute;
+            top: 434px;
+            right: 0;
+        }
+    
+        &__pictures-images {
+            display: none;
+        }
+    }
+}
+
+// For desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .app {
+        padding: 112px 0 102px 0;
+    
+        &__info {
+            padding-left: 200px;
+        }
+    
+        &__info-title {
+            line-height: normal;
+        }
+    
+        &__info-text {
+            line-height: 231%;
+            max-width: 460px;
+        }
+    
+        &__pictures-images-mob {
+            display: none;
+        }
+    
+        &__pictures-images {
+            position: absolute;
+            right: 106px;
+            bottom: 0;
+        }
+    }
+}

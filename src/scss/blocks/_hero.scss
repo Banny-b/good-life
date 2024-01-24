@@ -1,0 +1,116 @@
+.hero {
+    text-align: center;
+    background-size: cover;
+    background-color: var(--grey-color, #424242);
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &-slider {
+      display: flex;
+      width: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    &-slider__item {
+        flex: 0 0 100%;
+    }
+
+    &-slider__title {
+        font-family: 'Poppins-600';
+        color: var(--white-color, #FFFFFF);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &-slider__btn {
+        font-family: 'Poppins-600';
+        line-height: 37px;
+        color: var(--white-color, #FFFFFF);
+        background: var(--accent-color, #E43071);
+        border-radius: 38px;
+    }
+
+    &-contour {
+      width: 100%;
+      padding-top: 11px;
+    }
+}
+
+// Slider styles
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--white-color, #FFFFFF);
+  margin: 0 8px;
+  cursor: pointer;
+
+  &.active {
+    background-color: var(--accent-color, #E43071);
+  }
+}
+
+// For mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .hero {
+    height: 408px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('..//../img/hero/hero-mob.png');
+
+    &-slider__item {
+      padding: 113px 0 124px 0;
+    }
+
+    &-slider__title {
+      font-size: 32px;
+      line-height: 112%;
+      max-width: 226px;
+      margin-bottom: 23px;
+  }
+
+  &-slider__btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+  }
+}
+
+// For desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .hero {
+    height: 700px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('..//../img/hero/hero.png');
+  
+    &-slider__item {
+        padding: 240px 0 194px 0;
+    }
+  
+    &-slider__title {
+        font-size: 70px;
+        line-height: 110%;
+        max-width: 484px;
+        margin-bottom: 10px;
+    }
+  
+    &-slider__btn {
+        font-size: 16px;
+        border: 2px solid transparent;
+        padding: 14px 52px;
+        transition: var(--function-transit);
+        &:hover {
+            color: var(--accent-color, #E43071);
+            background: var(--white-color, #FFFFFF);
+            border: 2px solid var(--accent-color, #E43071);
+        }
+    }
+  }
+}
