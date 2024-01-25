@@ -41,7 +41,6 @@
     font-size: 16px;
     line-height: 109%;
     color: var(--grey-color, #424242);
-    width: 100%;
     border: 1px solid var(--pink-color, #FFC1D8);
     border-radius: 20px;
     padding: 4px 10px;
@@ -71,6 +70,13 @@
 
     &-inner__search-link {
         display: none;
+    }
+
+    &-inner__search-input {
+        position: absolute;
+        top: -2px;
+        right: -10px;
+        width: 84px;
     }
 
     &-btn {
@@ -130,6 +136,10 @@
             color: var(--white-color, #FFFFFF);
             margin-right: 6px;
             padding-left: 76px;
+        }
+    
+        &-inner__search-input {
+            width: 100%;
         }
     
         &-btn {
